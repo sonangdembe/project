@@ -3,24 +3,13 @@ import logo from '../logo.png';
 
 export const Navbar = () => {
   return (
-    <nav style={styles.navbar}>
-      <img src={logo} alt="Logo" style={styles.logo} />
+    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#8172db', opacity: 1 }}>
+      <div className="container-fluid">
+      <a className="navbar-brand" href="/MainPlanner">
+  <img src={logo} alt="ChimpVine Logo" width="185" height="56" style={{ fill: 'white' }} />
+</a>
+
+      </div>
     </nav>
   );
-};
-
-const styles = {
-  navbar: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '5px 10px',
-    backgroundColor: '#8172db',
-    height: '80px',
-  },
-  logo: {
-    width: '150px', 
-    height: '50px', 
-    margin: '0 5px',
-    filter: 'brightness(0) invert(1)',
-  },
 };
