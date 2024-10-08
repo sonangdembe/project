@@ -40,8 +40,10 @@ export const FunMath = () => {
         math_topic: data.mathTopic,
         interest: data.interest
       });
+
+
+      localStorage.setItem('funMathData', JSON.stringify(response.data));
       setGeneratedProblem(response.data);
-      localStorage.setItem('funMathData', JSON.stringify(data));
     } catch (error) {
       setErrorMessage('Failed to generate the math problem. Please try again.');
     } finally {
@@ -75,6 +77,7 @@ export const FunMath = () => {
       ...generatedProblem,
       ...editedProblem
     });
+    localStorage.setItem('funMathData', JSON.stringify(editedProblem));
     setShowEditModal(false);
   };
 
@@ -86,6 +89,7 @@ export const FunMath = () => {
     }));
   };
 
+  
 
   return (
     <div className="row justify-content-center mt-5">
@@ -307,7 +311,7 @@ export const FunMath = () => {
     label={<>Generate <FaArrowRightLong /></>}
     type="submit"
     className="btn btn-sm"
-    style={{ backgroundColor: 'rgb(255, 104, 59)', color: 'white', marginRight: '8px' }} // Add margin to the right
+    style={{ backgroundColor: 'rgb(255, 104, 59)', color: 'white', marginRight: '8px', }}
   />
 
   <Button
