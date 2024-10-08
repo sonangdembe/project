@@ -55,3 +55,46 @@
 
 
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buffering-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.jumping-shape {
+  width: 20px; /* Increased width for better visibility */
+  height: 20px; /* Set the height equal to the width for symmetry */
+  background-color: #120860; /* Deep blue background */
+  animation: jumpAndSwapShape 1s infinite;
+   /* Align it well within the container */
+}
+
+
+@keyframes jumpAndSwapShape {
+ 
+  50% {
+    transform: translateY(-30px);
+    border-radius: 50%; /* Circle shape */
+  }
+  0%, 100% {
+    transform: translateY(0);
+    border-radius: 0%; /* Square shape */
+  }
+}
+
+/* Loading text styling */
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
