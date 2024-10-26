@@ -7,7 +7,6 @@ import { Button } from './Button';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { GrPowerReset } from 'react-icons/gr';
 
-
 export const FunMath = () => {
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm();
   const [generatedProblem, setGeneratedProblem] = useState(null);
@@ -81,7 +80,7 @@ export const FunMath = () => {
 
   return (
     <div className="row justify-content-center mt-5">
-    <form onSubmit={handleSubmit(onSubmit)} className="col-md-5 border border-4 pt-4 pb-3 ps-4 pe-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="col-md-5 border border-4 pt-4 pb-3 ps-4 pe-4">
         <h3 className="text-center mb-4">Fun Math</h3>
         <div className="mb-3">
           <label className="form-label">Grade<span className="text-danger">*</span></label>
@@ -137,18 +136,17 @@ export const FunMath = () => {
       </form>
 
       <div className="row justify-content-center mt-5">
-      {loading && (
-        <div className="loading-container">
-          <div className="buffering-animation">
-            <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
-            <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
-            <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
+        {loading && (
+          <div className="loading-container">
+            <div className="buffering-animation">
+              <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
+              <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
+              <div className="jumping-shape" style={{ margin: '0 10px' }}></div> 
+            </div>
+            <h2 className="loading-text">Loading...</h2>
           </div>
-          <h2 className="loading-text">Loading...</h2>
-        </div>
-      )}
-</div>
-
+        )}
+      </div>
 
       {!loading && generatedProblem && (
         <div className='container'>
@@ -205,14 +203,14 @@ export const FunMath = () => {
             transition={{ delay: 0.6, duration: 0.8, ease: 'easeInOut' }}
             style={{ color: '#ff4500' }}
           >
-            <strong>Answer:</strong> {generatedProblem.answer.solution}
+            <strong>Answer:</strong> {generatedProblem.answer}
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, x: 0, y: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7, duration: 0.8, ease: 'easeInOut' }}
-            style={{ color: '#6495ed', fontWeight: 'bold' }}
+            style={{ color: '#4169e1', fontStyle: 'italic' }}
           >
             Fun Fact: {generatedProblem.fun_fact}
           </motion.p>
@@ -221,97 +219,79 @@ export const FunMath = () => {
             initial={{ opacity: 0, x: 0, y: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.8, ease: 'easeInOut' }}
-            style={{ color: '#d2691e', fontStyle: 'italic' }}
+            style={{ color: '#ff69b4', fontWeight: 'bold' }}
           >
-            Motivational Message: {generatedProblem.motivational_message}
+            "Motivational Message: {generatedProblem.motivational_message}"
           </motion.p>
 
-          <Button
-            label='Edit'
-            onClick={handleEdit} 
-            className='btn btn-sm'
-            style={{ backgroundColor: 'rgb(220, 53, 69)', color: 'white',width:'7%' }} 
-          />
-        </div>
-      )}
-
-      {/* Edit Modal */}
-      {showEditModal && (
-        <div className="modal-overlay" onClick={() => setShowEditModal(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h5>Edit Generated Problem</h5>
-            <form onSubmit={(e) => { e.preventDefault(); handleSaveChanges(); }}>
-              <div className="mb-3">
-                <label>Problem</label>
-                <textarea
-                  className="form-control"
-                  name="problem"
-                  value={editedProblem.problem || ''}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label>Hint</label>
-                <textarea
-                  className="form-control"
-                  name="hint"
-                  value={editedProblem.hint || ''}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label>Steps</label>
-                <textarea
-                  className="form-control"
-                  name="steps"
-                  value={editedProblem.steps?.join(', ') || ''}
-                  onChange={(e) => setEditedProblem(prev => ({
-                    ...prev,
-                    steps: e.target.value.split(', ').map(step => step.trim())
-                  }))}
-                />
-              </div>
-              <div className="mb-3">
-                <label>Answer</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="answer"
-                  value={editedProblem.answer || ''}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label>Fun Fact</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="fun_fact"
-                  value={editedProblem.fun_fact || ''}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label>Motivational Message</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="motivational_message"
-                  value={editedProblem.motivational_message || ''}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">Save Changes</button>
-            </form>
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <Button
+              label="Edit"
+              type="button"
+              className="btn btn-sm"
+              onClick={handleEdit}
+              style={{ backgroundColor: 'rgb(50, 115, 220)', color: 'white' }}
+            />
           </div>
         </div>
       )}
 
-      {errorMessage && (
-        <div className="alert alert-danger" role="alert">
-          {errorMessage}
+      {showEditModal && (
+        <div className="modal" onClick={() => setShowEditModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={() => setShowEditModal(false)}>&times;</span>
+            <h4>Edit Generated Problem</h4>
+            <input
+              type="text"
+              name="problem"
+              placeholder="Problem"
+              value={editedProblem.problem}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="hint"
+              placeholder="Hint"
+              value={editedProblem.hint}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="steps"
+              placeholder="Steps (comma-separated)"
+              value={editedProblem.steps?.join(', ')}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="answer"
+              placeholder="Answer"
+              value={editedProblem.answer}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="fun_fact"
+              placeholder="Fun Fact"
+              value={editedProblem.fun_fact}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="motivational_message"
+              placeholder="Motivational Message"
+              value={editedProblem.motivational_message}
+              onChange={handleInputChange}
+            />
+            <Button
+              label="Save Changes"
+              type="button"
+              onClick={handleSaveChanges}
+              style={{ backgroundColor: 'rgb(34, 193, 195)', color: 'white' }}
+            />
+          </div>
         </div>
-      )}z
+      )}
     </div>
   );
 };
