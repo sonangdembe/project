@@ -1,12 +1,14 @@
 import './App.css';
-import { FunMath } from './components/FunMath';
-import { Navbar } from './components/Navbar';
+// import { FunMath } from './components/FunMath';
+// import { Navbar } from './components/Navbar';
+import { Contactus } from './components/Contactus';
 
 function App() {
   return (
     <>
-      <Navbar/>      
-      <FunMath /> 
+      {/* <Navbar/>       */}
+      {/* <FunMath />  */}
+      <Contactus/>
     </>
   );
 }

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+
+/* Apply smooth scrolling to the entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+.custom-background {
+    background-color: #8F48D8 !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    border-radius: 20px; 
+ 
+}
+
+/* Styling for Larger Screens */
+.font-sized {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 35.55px;
+    text-align: left;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #8F48D8;
+    color: #fff;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Image and Content Styling */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 280px;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+.image-container img {
+    width: 75px;
+    height: auto;
+}
+
+.chimpu-logo {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.bulb {
+    margin-top: -200px;
+    margin-left: -80px;
+    position: relative;
+}
+
+/* Text Content Styling */
+.ai-tools {
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.text-ai {
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 200px;
+}
+
+/* Button Centering */
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Input Styling */
+.input-custom::placeholder {
+    font-family: 'Rubik', sans-serif;
+    color: #000;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.input-custom {
+    font-family: 'Rubik', sans-serif;
+    color: #000;
+}
+
+/* Form Styling */
+.form-container {
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.large-input {
+    width: 90%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    /* Chimpu Logo */
+    .chimpu-logo {
+        width: 80%;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    /* Image Container */
+    .image-container {
+        margin: 20px auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container img {
+        width: 60px;
+    }
+
+    /* Bulb Image */
+    .bulb {
+        margin: 20px auto;
+        position: static;
+        width: 60%;
+    }
+
+    /* Text Content */
+    .text-ai, .ai-tools {
+        text-align: center;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .ai-tools {
+        font-size: 24px;
+    }
+
+    .text-ai {
+        font-size: 14px;
+    }
+
+    /* Form Adjustments */
+    .form-container {
+        padding: 8px;
+        width: 90%;
+    }
+
+    .large-input {
+        width: 100%;
+    }
+}
