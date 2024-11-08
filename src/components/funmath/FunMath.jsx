@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { GrPowerReset } from 'react-icons/gr';
+import { Navbar } from './Navbar';
 
 export const FunMath = () => {
   const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm();
@@ -85,6 +86,8 @@ export const FunMath = () => {
   };
 
   return (
+    <>
+      <Navbar/>
     <div className="row justify-content-center mt-5">
       {!generatedProblem && (
         <form onSubmit={handleSubmit(onSubmit)} className="col-md-5 border border-4 pt-4 pb-3 ps-4 pe-4">
@@ -264,5 +267,6 @@ export const FunMath = () => {
         </div>
       )}
     </div>
+    </>
   );
 };

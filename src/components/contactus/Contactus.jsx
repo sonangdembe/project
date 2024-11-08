@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../funmath/Navbar';
 // import { FaArrowRight, FaEraser } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import './Contactus.css';
-import gearImage from '../images/gear1.png';
-import img from '../images/img.png';
-import innovation from '../images/innovation.png';
+import gearImage from '../../images/gear1.png';
+import img from '../../images/img.png';
+import innovation from '../../images/innovation.png';
 
 export function Contactus() {
   const countries = [
@@ -79,10 +79,14 @@ export function Contactus() {
     <>
       <div className="custom-background">
         <Navbar expand="lg" className="full-width" />
+
+
         <div className="image-container">
           <img src={gearImage} alt="AI"/>
           <p className="ai-tools">AI Tools</p>
         </div>
+
+        
         <p className='text-ai'>AI tool is a software application that<br />
           leverages artificial intelligence techniques<br />
           like machine learning, natural language<br />

@@ -16,7 +16,6 @@ body {
  
 }
 
-/* Styling for Larger Screens */
 .font-sized {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
@@ -68,12 +67,12 @@ body {
     width: 50%;
     max-width: 300px;
     height: auto;
-    margin-top: 20px;
     margin-left: 200px;
+    margin-bottom: 20px;
 }
 
 .bulb {
-    margin-top: -200px;
+    margin-top: -220px;
     margin-left: -80px;
     position: relative;
 }
@@ -113,7 +112,7 @@ body {
 
 /* Form Styling */
 .form-container {
-    padding: 16px;
+    padding: 5px;
     margin: 0 auto;
     max-width: 600px;
     box-sizing: border-box;
@@ -127,9 +126,9 @@ body {
 
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
-    /* Navbar */
+    
     html, body {
-        overflow: auto; /* Enables scrolling on mobile */
+        overflow: auto; 
         overflow-x: hidden; 
     }
     .navbar {
@@ -147,7 +146,7 @@ body {
     max-width: 200px;
     margin: 10px;
     margin-bottom: 300px;
- 
+    padding-bottom: 20px; 
 }
     /* Image Container */
     .image-container {
@@ -162,9 +161,12 @@ body {
 
     /* Bulb Image */
     .bulb {
-        margin: 20px auto;
+        margin: 0 auto;
         position: static;
-        width: 60%;
+        width: 80%;
+        /* margin-top: -450px;
+        margin-left: -70px;
+        */
     }
 
     /* Text Content */
@@ -185,7 +187,7 @@ body {
     /* Form Adjustments */
     .form-container {
         width: 90%;
-        margin: 100px;
+        margin: 20px;
     }
 
     .large-input {
