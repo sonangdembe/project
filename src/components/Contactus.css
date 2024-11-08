@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
 
 
-/* Apply smooth scrolling to the entire document */
-html {
-    scroll-behavior: smooth;
+body {
+    overflow: hidden;
+    height: 100%;
 }
 
 .custom-background {
@@ -128,6 +128,10 @@ html {
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
     /* Navbar */
+    html, body {
+        overflow: auto; /* Enables scrolling on mobile */
+        overflow-x: hidden; 
+    }
     .navbar {
         flex-direction: column;
         text-align: center;
@@ -137,23 +141,23 @@ html {
         width: 120px;
         margin-bottom: 10px;
     }
-
-    /* Chimpu Logo */
-    .chimpu-logo {
-        width: 80%;
-        max-width: 250px;
-        margin: 20px auto;
-    }
-
+ /* Chimpu Logo */
+ .chimpu-logo {
+    width: 80%;
+    max-width: 200px;
+    margin: 10px;
+    margin-bottom: 300px;
+ 
+}
     /* Image Container */
     .image-container {
-        margin: 20px auto;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
     }
 
     .image-container img {
-        width: 60px;
+        width: 30px;
     }
 
     /* Bulb Image */
@@ -164,7 +168,7 @@ html {
     }
 
     /* Text Content */
-    .text-ai, .ai-tools {
+    .text-ai, .ai-tools{
         text-align: center;
         font-size: 16px;
         margin: 0 auto;
@@ -180,8 +184,8 @@ html {
 
     /* Form Adjustments */
     .form-container {
-        padding: 8px;
         width: 90%;
+        margin: 100px;
     }
 
     .large-input {
