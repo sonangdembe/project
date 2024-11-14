@@ -1,25 +1,29 @@
-/* Form.css */
+/* Add these styles to your Form.css */
 
-.bingo-grid {
+.container {
+    max-width: 600px; /* Adjust width if necessary */
+  }
+  
+  .bingo-grid {
     display: grid;
-    grid-template-columns: repeat(5, 80px);
-    grid-gap: 10px;
-    justify-content: center;
-}
-
-.bingo-cell {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for bingo */
+    gap: 3px;
+    margin-top: 5px;
+  }
+  
+  .bingo-cell {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ddd;
-    width: 80px;
-    height: 80px;
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-}
-
-.bingo-cell.empty {
-    background-color: #e0e0e0;
-}
+    background-color: #f0f8ff;
+    border: 1px solid #000;
+    height: 80px; /* Set a fixed height */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bingo-cell.empty {
+    background-color: #eee;
+  }
+  
