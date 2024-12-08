@@ -5,7 +5,7 @@ import { Navbar } from '../funmath/Navbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import './Contactus.css';
+// import './Contactus.css';
 import gearImage from '../../images/gear1.png';
 import img from '../../images/img.png';
 import innovation from '../../images/innovation.png';

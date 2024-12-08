@@ -24,6 +24,30 @@
   }
   
   .bingo-cell.empty {
-    background-color: #eee;
-  }
+    background-color: #f0f0f0; /* Light gray for the empty center cell */
+}
+
   
+
+  /* Apply to the outer container that wraps the content */
+
+/* Ensure the content scrolls when it exceeds the viewport */
+.full-screen-container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the form is at the top and scrolls if needed */
+.main-content {
+  flex-grow: 1; /* Allow content to grow and take up available space */
+}
+
+/* Optional: Modify for small screens */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px; /* Add padding to prevent form from touching edges */
+  }
+}
+
