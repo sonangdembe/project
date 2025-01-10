@@ -5,12 +5,11 @@ export const Hero = () => {
   const [startCount, setStartCount] = useState(false);
   const countersRef = useRef(null);
 
-  // Function to handle the counter animation
   const animateCounters = () => {
     const counters = countersRef.current.querySelectorAll(".counter");
     counters.forEach((counter) => {
       const target = +counter.getAttribute("data-target");
-      const increment = target / 100; // Increment speed
+      const increment = target / 100; 
       let count = 0;
 
       const updateCounter = () => {
@@ -25,7 +24,6 @@ export const Hero = () => {
     });
   };
 
-  // Use Intersection Observer to detect when the section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,7 +32,7 @@ export const Hero = () => {
           setStartCount(true);
         }
       },
-      { threshold: 0.3 } // Trigger animation when 30% of the section is in view
+      { threshold: 0.3 } 
     );
 
     if (countersRef.current) {
@@ -46,7 +44,6 @@ export const Hero = () => {
     };
   }, []);
 
-  // Trigger counter animation when the section becomes visible
   useEffect(() => {
     if (startCount) {
       animateCounters();
@@ -66,7 +63,6 @@ export const Hero = () => {
       <Container fluid>
         <h4 className="display-4 fw-bold text-center m-5">Our Achievement</h4>
         <Row className="align-items-center g-0">
-          {/* Left Column: Hero Text */}
           <Col md={6} className="text-start px-5 ">
             <h1 className="display-3 fw-bold m-5" style={{ color: '#FFC145' }}>AI Innovations</h1>
             <p className="lead m-5 fst-italic">
@@ -77,12 +73,11 @@ export const Hero = () => {
             </Button>
           </Col>
 
-          {/* Right Column: Counters in Grid */}
           <Col md={6} className="d-flex justify-content-center align-items-center ">
             <div
               className="d-grid gap-4"
               style={{
-                gridTemplateColumns: "repeat(3, 1fr)", // Default: 3 columns for large screens
+                gridTemplateColumns: "repeat(3, 1fr)", 
                 textAlign: "center",
                 borderCollapse: "collapse",
               }}

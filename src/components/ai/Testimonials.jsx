@@ -4,7 +4,7 @@ import b from "./images/b.png";
 import c from "./images/c.png";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css"; 
 
 export const Testimonials = () => {
   const testimonials = [
@@ -27,9 +27,9 @@ export const Testimonials = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: "ease-in-out", // Animation easing
-      once: true, // Only animate once
+      duration: 1000, 
+      easing: "ease-in-out", 
+      once: true,
     });
   }, []);
 
@@ -51,20 +51,20 @@ export const Testimonials = () => {
               md={4}
               sm={6}
               className="text-center"
-              data-aos="zoom-in" // Apply AOS zoom-in animation
-              data-aos-delay={index * 100} // Delay each item slightly
+              data-aos="zoom-in" 
+              data-aos-delay={index * 100} 
             >
-              {/* Add image with infinite zoom animation */}
+              
               <div
                 className="img-container"
                 style={{
-                  overflow: "hidden", // Ensure the image doesn't spill outside
-                  borderRadius: "15px", // Optional for rounded corners
+                  overflow: "hidden", 
+                  borderRadius: "15px",
                   width: "100%",
-                  height: "500px", // Set a fixed height for all containers (match image c's height)
-                  maxWidth: "700px", // Increase the max width to make it wider
+                  height: "500px", 
+                  maxWidth: "700px", 
                   marginBottom: "30px",
-                  display: "flex", // Allow for centering
+                  display: "flex", 
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -73,10 +73,10 @@ export const Testimonials = () => {
                   src={testimonial.image}
                   alt={`Testimonial ${index + 1}`}
                   style={{
-                    width: "100%", // Set the width to 100% of the container
-                    height: "70%", // Ensure the height fills the container
-                    objectFit: "cover", // Maintain aspect ratio
-                    animation: "zoomInOut 10s infinite ease-in-out", // Infinite zoom effect
+                    width: "100%",
+                    height: "70%", 
+                    objectFit: "cover", 
+                    animation: "zoomInOut 10s infinite ease-in-out", 
                   }}
                 />
               </div>

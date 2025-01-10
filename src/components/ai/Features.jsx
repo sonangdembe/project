@@ -66,7 +66,7 @@ export const Features = () => {
               <Card
                 className="feature-card shadow-sm border-light text-white rounded h-100"
                 style={{
-                  backgroundColor: "rgba(33, 53, 85, 0.1)", // Apply custom color with 80% opacity
+                  backgroundColor: "rgba(33, 53, 85, 0.1)", 
                 }}
               >
                 <Card.Body className="text-center">

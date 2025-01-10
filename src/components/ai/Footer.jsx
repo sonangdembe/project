@@ -10,9 +10,7 @@ export const Footer = () => {
       }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
-        {/* Left Section: About Company and Social Media */}
         <div className="space-y-10 md:text-left">
-          {/* About Company */}
           <div>
             <h4 className="font-bold text-lg mb-4 ">About Danson AI</h4>
             <p className="text-sm leading-6">
@@ -20,7 +18,6 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Social Media */}
           <div>
             <h4 className="font-bold text-lg mb-4">Follow Us</h4>
             <p className="text-sm mb-4">
@@ -71,13 +68,11 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section: Quick Links */}
         <div className="text-center md:text-left md:text-right">
         
         </div>
       </div>
 
-      {/* Bottom Footer Section */}
       <div className="bg-gray-800 text-black py-5 border-t border-gray-700 text-center" style={{ fontSize: "12px" }}>
         <p>© {new Date().getFullYear()} Danson AI. All Rights Reserved.</p>
         <p>Designed with ❤️ by <strong>Danson AI Team</strong>.</p>

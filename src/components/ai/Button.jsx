@@ -1,16 +1,16 @@
 
 import React from 'react';
-import { FaArrowRightLong } from 'react-icons/fa'; // Example icon
+import { FaArrowRightLong } from 'react-icons/fa'; 
 
 export const Button = ({ text, onClick, style, icon }) => {
   return (
     <button
       className="btn btn-light align-items-center"
-      style={style} // Apply custom styles passed from the parent
+      style={style} 
       
     >
         {text}
-      {icon && <span className="me-2">{icon}</span>} {/* Render icon if provided */}
+      {icon && <span className="me-2">{icon}</span>} 
       
     </button>
   );

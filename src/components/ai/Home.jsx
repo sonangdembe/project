@@ -112,7 +112,6 @@ export const Home = () => {
             </Carousel.Item>
           </Carousel>
 
-          {/* Mission Button */}
           <button
             className="border-1 border-white rounded-pill bg-transparent text-white p-2 position-absolute"
             style={{
@@ -124,7 +123,6 @@ export const Home = () => {
             <FaBrain className="m-1" size={25} /> MISSION GLOBAL MARKETING
           </button>
 
-          {/* Slide Content */}
           <div
             className="position-absolute"
             style={{
@@ -143,7 +141,6 @@ export const Home = () => {
                 {slideContent[carouselIndex]?.paragraph}
               </p>
 
-              {/* Discover Button */}
               {showElements && (
                 <Button
                   text="Discover Now"
@@ -161,7 +158,6 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* About Us Section */}
           <Hero />
  <Features/>   
  <Services/> 

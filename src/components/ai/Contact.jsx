@@ -33,8 +33,8 @@ export const Contact = () => {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center", // Center items closer together
-        gap: "20px", // Space between the form and image
+        justifyContent: "center", 
+        gap: "20px", 
         padding: "20px",
       }}
     >
@@ -69,11 +69,11 @@ export const Contact = () => {
         className="form-container"
         style={{
           position: "relative",
-          width: "550px", // Form width
+          width: "550px", 
           backgroundColor: "white",
           borderRadius: "8px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          padding: "20px", // Add padding for better spacing
+          padding: "20px", 
         }}
       >
         <h2 className="text-center mb-4">Contact Us</h2>
@@ -89,7 +89,7 @@ export const Contact = () => {
             </div>
           )}
 
-          {/* Name Field */}
+         
           <div className="mb-3">
             <label htmlFor="name" className="form-label">
               Name<span className="text-danger">*</span>
@@ -106,7 +106,7 @@ export const Contact = () => {
             />
           </div>
 
-          {/* Email Field */}
+  
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email<span className="text-danger">*</span>
@@ -123,7 +123,7 @@ export const Contact = () => {
             />
           </div>
 
-          {/* Subject Field */}
+         
           <div className="mb-3">
             <label htmlFor="subject" className="form-label">
               Subject
@@ -139,7 +139,7 @@ export const Contact = () => {
             />
           </div>
 
-          {/* Message Field */}
+       
           <div className="mb-3">
             <label htmlFor="message" className="form-label">
               Message<span className="text-danger">*</span>
@@ -156,7 +156,6 @@ export const Contact = () => {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <div className="text-center">
             <button type="submit" className="btn btn-primary w-100">
               Submit

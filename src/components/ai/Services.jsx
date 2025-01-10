@@ -4,16 +4,16 @@ import AOS from "aos";
 import img from "./images/aiCons.webp";
 import img2 from "./images/deve.jpg";
 import img3 from "./images/gene.jpg";
-import "aos/dist/aos.css"; // Import AOS styles
-import "./AI.css"; // Optional custom styles
+import "aos/dist/aos.css"; 
+import "./AI.css"; 
 
 export const Services = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200, // Animation duration
-      offset: 100, // Offset to trigger animation
-      easing: "ease-in-out", // Animation easing
-      once: true, // Only animate once
+      duration: 1200, 
+      offset: 100, 
+      easing: "ease-in-out", 
+      once: true, 
     });
   }, []);
 
@@ -38,14 +38,14 @@ export const Services = () => {
           {services.map((service, index) => (
             <Col key={index} md={4} sm={6} data-aos="zoom-in" data-aos-delay={index * 100}>
               <Card className="service-card shadow-sm border-light rounded h-100">
-                {/* Image with dynamic background */}
+              
                 <div
                   className="service-image"
                   style={{
-                    backgroundImage: `url(${service.image})`, // Dynamically assign image
+                    backgroundImage: `url(${service.image})`, 
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "250px", // Make image container larger
+                    height: "250px", 
                     borderTopLeftRadius: "5px",
                     borderTopRightRadius: "5px",
                   }}
