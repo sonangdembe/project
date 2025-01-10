@@ -1,4 +1,4 @@
-.loading-container {
+/* .loading-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@
   animation: bounce 0.6s infinite alternate;
 }
 
-/* Animation effect for the circles */
+/* Animation effect for the circles 
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -70,27 +70,25 @@
 
 
 .jumping-shape {
-  width: 20px; /* Increased width for better visibility */
-  height: 20px; /* Set the height equal to the width for symmetry */
-  background-color: #120860; /* Deep blue background */
+  width: 20px;
+  height: 20px; 
+  background-color: #120860; 
   animation: jumpAndSwapShape 1s infinite;
-   /* Align it well within the container */
-}
+   
 
 
 @keyframes jumpAndSwapShape {
  
   50% {
     transform: translateY(-30px);
-    border-radius: 50%; /* Circle shape */
+    border-radius: 50%; 
   }
   0%, 100% {
     transform: translateY(0);
-    border-radius: 0%; /* Square shape */
+    border-radius: 0%;
   }
 }
 
-/* Loading text styling */
 .loading-text {
   margin-top: 20px;
   font-size: 1.5rem;
@@ -117,4 +115,4 @@
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
-}
+} */

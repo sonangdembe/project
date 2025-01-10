@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FunMath } from './components/funmath/FunMath';
 import { Twitter } from './components/twiter/Twitter';
 import {LessonPlanner} from './components/lessonPlanner/LessonPlanner';
+import { Home } from './components/ai/Home';
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/form' element={<Form/>}/>
         <Route path='/twitter' element={<Twitter/>}/>
         <Route path='/lessonPlanner' element={<LessonPlanner/>}/>
+        <Route path='/ai' element={<Home/>}/>
       </Routes>
       </BrowserRouter>
     </>

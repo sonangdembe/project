@@ -7,22 +7,22 @@ import ellipse from "./images/Ellipse 1.png";
 import "./lessonPlanner.css";
 import { SecondPage } from "./SecondPage";
 import { ThirdPage } from "./ThirdPage";
-import { FourthPage} from './FourthPage'
+import { FourthPage } from "./FourthPage";
 import { Fifth } from "./Fifth";
-
+import { Sixth } from "./Sixth";
+import { Last } from "./Last";
 
 export const LessonPlanner = () => {
   return (
     <>
       <Navbar />
 
-
-      {/* Fiirst part */}
-      <div className="container-fluid" style={{ marginTop: "120px" }}>
+      {/* First Section */}
+      <div className="container-fluid px-3" style={{ marginTop: "120px" }}>
         {/* Main Content Row */}
         <div className="row justify-content-center align-items-center">
           {/* Left Side - Content */}
-          <div className="col-12 col-md-5 d-flex justify-content-start align-items-center">
+          <div className="col-12 col-md-5">
             <div>
               <button
                 className="btn btn-primary poppins-bold"
@@ -36,9 +36,6 @@ export const LessonPlanner = () => {
                 Category
               </button>
 
-
-
-
               <div
                 style={{
                   display: "flex",
@@ -48,17 +45,16 @@ export const LessonPlanner = () => {
                 }}
               >
                 <img
-  src={ellipse}
-  alt="ellipse"
-  style={{
-    width: "35px",
-    height: "34px",
-    marginTop: "-20px",
-    marginRight: "10px",
-    position: "relative",
-  }}
-/>
-
+                  src={ellipse}
+                  alt="ellipse"
+                  style={{
+                    width: "35px",
+                    height: "34px",
+                    marginTop: "-20px",
+                    marginRight: "10px",
+                    position: "relative",
+                  }}
+                />
                 <img
                   src={vector}
                   alt="vectorImg"
@@ -82,16 +78,15 @@ export const LessonPlanner = () => {
                 specific teaching needs.
               </p>
 
-              <div style={{ width: "50%" }}>
+              <div>
                 <button
-                  className="mb-5 poppins-medium"
+                  className="btn btn-primary poppins-medium"
                   style={{
                     backgroundColor: "#8172DB",
                     color: "white",
-                    padding: "10px",
+                    padding: "15px",
                     borderRadius: "10px",
                     border: "none",
-                    width: "100%",
                   }}
                 >
                   See full generation here!
@@ -101,40 +96,37 @@ export const LessonPlanner = () => {
           </div>
 
           {/* Right Side - Image Container */}
-          <div className="col-12 col-md-5 d-flex justify-content-end align-items-center">
+          <div className="col-12 col-md-5">
             <img
               src={FirstImg}
               alt="Lesson Planner"
               className="img-fluid rounded"
-              style={{ width: "80%" }}
+              style={{ width: "100%", marginTop :'10px',}}
             />
           </div>
         </div>
 
         {/* Key Benefits Section */}
         <div className="row mt-5 justify-content-center">
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center text-center">
-            <div>
-              <h1 className="custom-bg rounded py-2 px-4 d-inline-block poppins-bold">
-                KEY BENEFITS
-              </h1>
-              <p className="mt-3 poppins-medium">
-                Utilizing the AI Lesson Planner offers numerous advantages for both teachers and students:
-              </p>
-
-            </div>
+          <div className="col-12 col-md-6 text-center">
+            <h1 className="custom-bg rounded py-2 px-4 d-inline-block poppins-bold">
+              KEY BENEFITS
+            </h1>
+            <p className="mt-3 poppins-medium">
+              Utilizing the AI Lesson Planner offers numerous advantages for
+              both teachers and students:
+            </p>
           </div>
         </div>
-        </div>
+      </div>
 
-
-
-
-<SecondPage/>
-<ThirdPage/>
-<FourthPage/>
-<Fifth/>
-
+      {/* Additional Pages */}
+      <SecondPage />
+      <ThirdPage />
+      <FourthPage />
+      <Fifth />
+      <Sixth/>
+      <Last/>
     </>
   );
 };

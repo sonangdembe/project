@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Animation for text */
+.text-animation {
+  animation: slideInFromRight 2s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for paragraph */
+.paragraph-animation {
+  animation: slideUpFromBelow 2s ease-in-out;
+}
+
+@keyframes slideUpFromBelow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button animation */
+.button-animation {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* .carousel-container {
+  height: 80vh; }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 60vh; /* Adjust based on your design */
+  }
+  .carousel-item  { 
+    height: 70vh; 
+  }
+  .carousel-item img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 1rem;
+  }
+
+  .button-animation {
+    bottom: 10%;
+    left: 90%;
+    padding-top: '5px';
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* hero */
+@media (max-width: 767px) {
+  .d-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+  }
+}
+
+
+
+/* service css */
+/* Add these styles in your CSS file (e.g., App.css) */
+
+
+/* Add custom styles for positioning the text on the image */
+.service-image {
+  position: relative;
+  width: 100%;
+  border-radius: 0.375rem; /* Ensure rounded corners for images inside the card */
+}
+
+/* Optional: Add hover effect for the image */
+.service-image:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Gradient background animation */
+@keyframes gradientAnimation {
+  /* 0% {
+    background: linear-gradient(to bottom, rgba(62, 88, 121, 0.8), rgba(33, 53, 85, 1));
+  }
+  50% {
+    background: linear-gradient(to bottom, rgba(33, 53, 85, 1), rgba(62, 88, 121, 0.8));
+  }
+  100% {
+    background: linear-gradient(to bottom, rgba(62, 88, 121, 0.8), rgba(33, 53, 85, 1));
+  } */
+}
+
+/* Card hover effect */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon animation */
+.animated-icon {
+  animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Button hover animation */
+.animated-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #21405f;
+  transform: scale(1.1);
+}
+
+
+
+
+/* services */
+.service-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* testimonials */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Initial size */
+  }
+  50% {
+    transform: scale(1.2); /* Zoom-in effect */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
+}

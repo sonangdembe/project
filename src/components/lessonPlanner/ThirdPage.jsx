@@ -3,21 +3,35 @@ import stepVideo from "./images/Step Video.png";
 
 const Step = ({ stepNumber, title, description, bgColor, textColor }) => {
   return (
-    <div className="col-md-6">
-      <div className="bg-white shadow p-4 rounded-5 m-5">
-        <button
-          className="btn btn-primary poppins-bold"
-          style={{
-            backgroundColor: bgColor, // Unique background for each step
-            color: textColor, // Unique text color for each step
-            borderRadius: "20px",
-            padding: '4px',
-            margin: '4px 0 4px 0',
-            border: "none",
-          }}
-        >
-          Step {stepNumber}
-        </button>
+    <div className="" style={{width:'100%'}}>
+      <div className="bg-white shadow p-4 rounded-5 m-5" >
+      
+      
+      
+
+
+      <div
+  className="d-flex justify-content-center align-items-center"
+  style={{ minHeight: "7vh" }} // Ensures the button is vertically centered on smaller screens
+>
+  <button
+    className="btn btn-primary poppins-bold"
+    style={{
+      backgroundColor: bgColor, // Unique background for each step
+      color: textColor, // Unique text color for each step
+      borderRadius: "20px",
+      padding: "10px 20px",
+      border: "none",
+    }}
+  >
+    Step {stepNumber}
+  </button>
+</div>
+
+
+
+
+
         <h3 className="poppins-bold">{title}</h3>
         <p
           className="poppins-medium"
@@ -26,6 +40,8 @@ const Step = ({ stepNumber, title, description, bgColor, textColor }) => {
             color: textColor, // Matches the button text color
             padding: "10px",
             borderRadius: "10px",
+            
+            
           }}
         >
           {description}
@@ -82,42 +98,43 @@ export const ThirdPage = () => {
       <div className="mx-auto rounded-lg pl-5 ml-3">
         <div className="row min-vh-100">
           {steps.slice(0, 4).map((step) => (
-            <Step
+            <div
               key={step.stepNumber}
-              stepNumber={step.stepNumber}
-              title={step.title}
-              description={step.description}
-              bgColor={step.bgColor}
-              textColor={step.textColor}
-            />
+              className="col-md-6 col-12 d-flex justify-content-center align-items-center"
+              style={{ minHeight: "50vh" }} // Ensures height for proper vertical alignment
+            >
+              <Step
+                stepNumber={step.stepNumber}
+                title={step.title}
+                description={step.description}
+                bgColor={step.bgColor}
+                textColor={step.textColor}
+              />
+            </div>
           ))}
         </div>
       </div>
 
-      {/* Separate container for Step 5 */}
-
-      <div className="d-flex justify-content-center align-items-center ">
-        <div className=" p-4 rounded-5 ">
-          <Step
-            stepNumber={5}
-            title="Generate Lesson Plan"
-            description="Click on the 'Generate' button, and the AI instantly creates a comprehensive lesson plan ready to be implemented in your classroom."
-            bgColor="#FFD994" // Light Red
-            textColor="#000" // Dark Red
-          />
-        </div>
+      <div className="d-flex justify-content-center align-items-center mt-4">
+      <div className="col-md-8 col-10"> 
+        <Step
+          stepNumber={5}
+          title="Generate Lesson Plan"
+          description="Click on the 'Generate' button, and the AI instantly creates a comprehensive lesson plan ready to be implemented in your classroom."
+          bgColor="#FFD994" 
+          textColor="#000" 
+        />
       </div>
-      
-      <div className="d-flex justify-content-center align-items-center">
-  <img 
-    src={stepVideo} 
-    className="img-fluid" 
-    alt="Step Video" 
-  />
-</div>
+      </div>
 
-
-
+      <div className="d-flex justify-content-center align-items-center mt-4">
+        <img 
+          src={stepVideo} 
+          className="img-fluid" 
+          alt="Step Video" 
+        />
+      </div>
     </>
   );
 };
+
