@@ -8,6 +8,7 @@ import { FunMath } from './components/funmath/FunMath';
 import { Twitter } from './components/twiter/Twitter';
 import {LessonPlanner} from './components/lessonPlanner/LessonPlanner';
 import { Home } from './components/ai/Home';
+import { HomePage } from './components/quiz/HomePage';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/twitter' element={<Twitter/>}/>
         <Route path='/lessonPlanner' element={<LessonPlanner/>}/>
         <Route path='/ai' element={<Home/>}/>
+        <Route path='/quiz' element={<HomePage/>}/>
       </Routes>
       </BrowserRouter>
     </>
