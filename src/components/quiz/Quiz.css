@@ -7,5 +7,42 @@
     font-style: normal;
   }
   
+  .feedback {
+    font-size: 1.5rem;
+    color: #28a745;
+    text-align: center;
+    animation: move-up 1s ease-in-out;
+  }
+  
+  .show-emoji {
+    animation: fade-in-out 1s ease-in-out;
+  }
+  
+  .feedback-message {
+    display: block;
+  }
+  
+  @keyframes move-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   
  
