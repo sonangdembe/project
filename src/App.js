@@ -9,6 +9,7 @@ import { Twitter } from './components/twiter/Twitter';
 import {LessonPlanner} from './components/lessonPlanner/LessonPlanner';
 import { Home } from './components/ai/Home';
 import { HomePage } from './components/quiz/HomePage';
+import { PowerPointLikeApp } from './components/edited/PowerPointLikeApp';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <Route path='/lessonPlanner' element={<LessonPlanner/>}/>
         <Route path='/ai' element={<Home/>}/>
         <Route path='/quiz' element={<HomePage/>}/>
+        <Route path='/power' element={<PowerPointLikeApp/>}/>
       </Routes>
       </BrowserRouter>
     </>
