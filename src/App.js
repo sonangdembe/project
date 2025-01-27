@@ -10,6 +10,7 @@ import {LessonPlanner} from './components/lessonPlanner/LessonPlanner';
 import { Home } from './components/ai/Home';
 import { HomePage } from './components/quiz/HomePage';
 import { PowerPointLikeApp } from './components/edited/PowerPointLikeApp';
+import { Plugins } from './components/edited/Plugins';
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/ai' element={<Home/>}/>
         <Route path='/quiz' element={<HomePage/>}/>
         <Route path='/power' element={<PowerPointLikeApp/>}/>
+        <Route path='/plugins' element={<Plugins/>}/>
       </Routes>
       </BrowserRouter>
     </>
