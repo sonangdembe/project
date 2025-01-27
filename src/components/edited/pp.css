@@ -1,0 +1,32 @@
+.slides-container {
+  /* Adjust width for better layout */
+  width: 100%; 
+  max-width: 350px; /* Set a larger width for the container */
+}
+
+.slides-list {
+  /* No changes here */
+}
+
+.slides-list .list-group-item {
+  padding: 1rem 1.5rem; /* Increase padding for larger list items */
+  font-size: 1.2rem; /* Increase font size */
+  border-radius: 8px; /* Add some rounding for better visuals */
+  margin-bottom: 10px; /* Add spacing between list items */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.slides-list .list-group-item:hover {
+  background-color: #f0f0f0; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.list-group-item-light {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.bg-primary.text-white {
+  background-color: #007bff !important;
+  color: #ffffff !important;
+}
